@@ -13,6 +13,22 @@ public class ViewTestRule<A extends Activity, V extends View> extends ActivityTe
     private final boolean launchView;
     private V view;
 
+    public static <V extends View> ViewTestRule<?, V> create(ViewFactory<V> viewFactory) {
+        return new ViewTestRule<>(Activity.class, viewFactory);
+    }
+
+    public static <V extends View> ViewTestRule<?, V> create(boolean initialTouchMode, ViewFactory<V> viewFactory) {
+        return new ViewTestRule<>(Activity.class, initialTouchMode, viewFactory);
+    }
+
+    public static <V extends View> ViewTestRule<?, V> create(boolean initialTouchMode, boolean launchActivity, ViewFactory<V> viewFactory) {
+        return new ViewTestRule<>(Activity.class, initialTouchMode, launchActivity, viewFactory);
+    }
+
+    public static <V extends View> ViewTestRule<?, V> create(boolean initialTouchMode, boolean launchActivity, boolean launchView, ViewFactory<V> viewFactory) {
+        return new ViewTestRule<>(Activity.class, initialTouchMode, launchActivity, launchView, viewFactory);
+    }
+
     public ViewTestRule(Class<A> activityClass, ViewFactory<V> viewFactory) {
         this(activityClass, false, viewFactory);
     }

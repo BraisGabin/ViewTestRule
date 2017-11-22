@@ -1,1 +1,1 @@
-include ':viewtestrule', ':sample'
+include ':viewtestrule', ':sample', ':viewtestrule-extras'
