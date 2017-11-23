@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-public interface ViewFactory<T extends View> {
+public interface ViewFactory<A extends Activity, T extends View> {
 
-    T create(Activity activity, ViewGroup parent);
+    T create(A activity, ViewGroup parent);
 }
