@@ -49,15 +49,17 @@ public class ViewTestRule<A extends Activity, V extends View> extends ActivityTe
     @Override
     protected void afterActivityLaunched() {
         if (launchView) {
-            launchView(createView());
+            launchView(null);
         }
     }
 
     public void launchView(final V view) {
         try {
-            final V view2 = view == null ? createView() : view;
-            ViewTestRule.this.view = view2;
-            runOnUiThread(() -> getActivity().setContentView(view2));
+            runOnUiThread(() -> {
+                final V view2 = view == null ? createView() : view;
+                ViewTestRule.this.view = view2;
+                getActivity().setContentView(view2);
+            });
         } catch (Throwable throwable) {
             throw new RuntimeException(throwable);
         }
