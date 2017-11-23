@@ -24,3 +24,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
