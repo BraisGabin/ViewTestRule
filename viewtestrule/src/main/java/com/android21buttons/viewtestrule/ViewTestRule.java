@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 
 public class ViewTestRule<A extends Activity, V extends View> extends ActivityTestRule<A> {
-    private static final String TAG = "FragmentTestRule";
+    private static final String TAG = "ViewTestRule";
 
     private final ViewFactory<A, V> viewFactory;
     private final boolean launchView;
