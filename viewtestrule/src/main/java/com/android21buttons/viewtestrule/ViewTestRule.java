@@ -1,7 +1,7 @@
 package com.android21buttons.viewtestrule;
 
 import android.app.Activity;
-import android.support.test.rule.ActivityTestRule;
+import androidx.test.rule.ActivityTestRule;
 import android.util.Log;
 import android.view.View;
 
