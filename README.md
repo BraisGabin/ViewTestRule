@@ -5,8 +5,8 @@ Test `View`s in isolation.
 ## Download
 
 ```gradle
-androidTestImplementation 'com.21buttons:view-test-rule:1.0.0'
-debugImplementation 'com.21buttons:view-test-rule-extras:1.0.0'
+androidTestImplementation 'com.21buttons:view-test-rule:1.0.1'
+debugImplementation 'com.21buttons:view-test-rule-extras:1.0.1'
 ```
 
 ## Usage
